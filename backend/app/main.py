@@ -4,10 +4,10 @@ from app.routes import employees, attendance
 
 app = FastAPI(title="HRMS Lite API", version="1.0.0")
 
-# CORS middleware
+# CORS middleware - Updated for production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],  # Allow all origins for now
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
